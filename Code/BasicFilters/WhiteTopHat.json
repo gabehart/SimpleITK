@@ -1,19 +1,24 @@
 {
-  "name" : "GrayscaleErode",
+  "name" : "WhiteTopHat",
   "template_code_filename" : "KernelImageFilter",
+  "template_test_filename" : "ImageFilter",
   "number_of_inputs" : 1,
-  "doc" : "Performs Erode in a grayscale image.",
+  "doc" : "",
   "pixel_types" : "BasicPixelIDTypeList",
-  /* TODO Boundary Member */
   "members" : [
+    { "name" : "SafeBorder",
+      "type" : "bool",
+      "default" : true,
+      "doc" : ""
+    }
   ],
   "custom_methods" : [],
   "tests" : [
    {
-     "tag" : "GrayscaleErode",
-     "description" : "Test grayscale erode",
+     "tag" : "WhiteTopHatErode",
+     "description" : "Test white top hat",
      "inputA" : "Input/STAPLE1.png",
-     "md5hash" : "cb0f49738a99f3467b575bc95a0ace44",
+     "md5hash" : "e784daff43d09a18e20556729afc0c9d",
      "settings" : [
        { "parameter" : "KernelRadius",
          "no_get_method" : 1,
@@ -28,6 +33,6 @@
          "tcl_value" : "$$${name}ImageFilter_Ball"
        }
      ]
-   }
+    }
   ]
 }

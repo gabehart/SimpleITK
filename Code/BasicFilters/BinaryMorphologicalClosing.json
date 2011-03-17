@@ -1,19 +1,24 @@
 {
-  "name" : "GrayscaleErode",
+  "name" : "BinaryMorphologicalClosing",
   "template_code_filename" : "KernelImageFilter",
   "number_of_inputs" : 1,
-  "doc" : "Performs Erode in a grayscale image.",
-  "pixel_types" : "BasicPixelIDTypeList",
-  /* TODO Boundary Member */
+  "doc" : "",
+  "pixel_types" : "IntegerPixelIDTypeList",
   "members" : [
+    {
+      "name" : "ForegroundValue",
+      "type" : "double",
+      "default" : "255",
+      "doc" : ""
+    }
   ],
   "custom_methods" : [],
   "tests" : [
    {
-     "tag" : "GrayscaleErode",
-     "description" : "Test grayscale erode",
+     "tag" : "BinaryMorphologicalClosing",
+     "description" : "Test binary morphological closing",
      "inputA" : "Input/STAPLE1.png",
-     "md5hash" : "cb0f49738a99f3467b575bc95a0ace44",
+     "md5hash" : "095f00a68a84df4396914fa758f34dcc",
      "settings" : [
        { "parameter" : "KernelRadius",
          "no_get_method" : 1,

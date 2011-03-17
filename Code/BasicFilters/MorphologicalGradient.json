@@ -1,19 +1,18 @@
 {
-  "name" : "GrayscaleErode",
+  "name" : "MorphologicalGradient",
   "template_code_filename" : "KernelImageFilter",
+  "template_test_filename" : "ImageFilter",
   "number_of_inputs" : 1,
-  "doc" : "Performs Erode in a grayscale image.",
+  "doc" : "",
   "pixel_types" : "BasicPixelIDTypeList",
-  /* TODO Boundary Member */
-  "members" : [
-  ],
+  "members" : [],
   "custom_methods" : [],
   "tests" : [
    {
-     "tag" : "GrayscaleErode",
-     "description" : "Test grayscale erode",
+     "tag" : "MorphologicalGradient",
+     "description" : "Test morhological gradient",
      "inputA" : "Input/STAPLE1.png",
-     "md5hash" : "cb0f49738a99f3467b575bc95a0ace44",
+     "md5hash" : "57167a1d86b60fbf9e040d9441676876",
      "settings" : [
        { "parameter" : "KernelRadius",
          "no_get_method" : 1,

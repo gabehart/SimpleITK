@@ -1,19 +1,24 @@
 {
-  "name" : "GrayscaleErode",
+  "name" : "BinaryClosingByReconstruction",
   "template_code_filename" : "KernelImageFilter",
   "number_of_inputs" : 1,
-  "doc" : "Performs Erode in a grayscale image.",
-  "pixel_types" : "BasicPixelIDTypeList",
-  /* TODO Boundary Member */
+  "doc" : "",
+  "pixel_types" : "IntegerPixelIDTypeList",
+  "no_output_type" : 1,
   "members" : [
+    { "name" : "FullyConnected",
+      "type" : "bool",
+      "default" : "false",
+      "doc" : ""
+    }
   ],
   "custom_methods" : [],
   "tests" : [
    {
-     "tag" : "GrayscaleErode",
-     "description" : "Test grayscale erode",
+     "tag" : "BinaryClosingByReconstruction",
+     "description" : "Test binary closing by reconstruction",
      "inputA" : "Input/STAPLE1.png",
-     "md5hash" : "cb0f49738a99f3467b575bc95a0ace44",
+     "md5hash" : "095f00a68a84df4396914fa758f34dcc",
      "settings" : [
        { "parameter" : "KernelRadius",
          "no_get_method" : 1,
@@ -21,13 +26,13 @@
        },
        { "parameter" : "KernelType",
          "value" : "itk::simple::${name}ImageFilter::Ball",
-         "lua_value" : "SimpleITK.${name}ImageFilter_Ball", 
+         "lua_value" : "SimpleITK.${name}ImageFilter_Ball",
          "python_value" : "SimpleITK.${name}ImageFilter.Ball",
          "ruby_value" : "Simpleitk::${name}ImageFilter::Ball",
          "java_value" : "${name}ImageFilter.OperationType.Ball",
          "tcl_value" : "$$${name}ImageFilter_Ball"
        }
      ]
-   }
+     }
   ]
 }
