@@ -1,0 +1,6 @@
+#ifndef __sitk${name}ImageFilter_h
+#define __sitk${name}ImageFilter_h
+
+#include <memory>
+
+#include "sitkDualImageFilter.h"

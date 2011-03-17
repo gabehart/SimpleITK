@@ -1,0 +1,16 @@
+$(if number_of_inputs == 2 then
+OUT=[[
+      /** Setup for member function dispatching */
+      typedef Image* (Self::*MemberFunctionType)( Image*, Image* );
+      template <class TImageType> Image* ExecuteInternal ( Image* image1, Image* image2 );
+      friend struct detail::MemberFunctionAddressor<MemberFunctionType>;
+      std::auto_ptr<detail::MemberFunctionFactory<MemberFunctionType> > m_MemberFactory;
+]]
+else
+OUT=[[
+      /** Setup for member function dispatching */
+      typedef Image* (Self::*MemberFunctionType)( Image* );
+      template <class TImageType> Image* ExecuteInternal ( Image* image );
+      friend struct detail::MemberFunctionAddressor<MemberFunctionType>;
+      std::auto_ptr<detail::MemberFunctionFactory<MemberFunctionType> > m_MemberFactory;
+]]end)

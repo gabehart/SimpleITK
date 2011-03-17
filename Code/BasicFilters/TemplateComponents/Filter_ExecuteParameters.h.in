@@ -1,0 +1,5 @@
+$(if members and #members > 0 then
+OUT=[[
+      /** Execute the filter on the input image$(if number_of_inputs == 2 then OUT='s'end) with the given parameters */
+      Image* Execute ( Image*$(if number_of_inputs == 2 then OUT=', Image*' end)$(foreach members ,
+        ${type} in${name}) );]]end)
