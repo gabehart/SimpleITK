@@ -111,7 +111,10 @@ endif()
 
 
 
-subdirs ( Utilities Code Wrapping Examples )
+add_subdirectory ( Utilities )
+add_subdirectory ( Code )
+add_subdirectory ( Wrapping )
+add_subdirectory ( Examples )
 
 
 #-----------------------------------------------------------------------------
@@ -125,7 +128,7 @@ option ( USE_TESTING "Build testing" ON )
 
 if ( USE_TESTING )
   enable_testing()
-  subdirs ( Testing )
+  add_subdirectory ( Testing )
   include(CTest)
   option ( RUN_LONG_TESTS "Run long tests.  Some tests have been identified as long running, should these be run?" OFF )
   mark_as_advanced(RUN_LONG_TESTS)
@@ -150,5 +153,5 @@ include(${SimpleITK_SOURCE_DIR}/sitkGenerateSimpleITKConfig.cmake)
 option ( BUILD_DOCUMENTS "Build testing" OFF )
 
 if ( BUILD_DOCUMENTS )
-  subdirs ( Documentation )
+  add_subdirectory ( Documentation )
 endif()
