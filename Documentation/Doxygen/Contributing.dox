@@ -31,4 +31,45 @@
 -- Please add new examples!
 -- Run them by the core developers before committing
 
+\section SoftwareProcess Software Process
+- Github repo (https://github.com/SimpleITK/SimpleITK)
+-- Fork a local copy
+-- Main repo should only have "master" and "next" branches
+
+- Git setup:
+-- "origin" should be main github repo
+-- Add remote for personal fork (eg: gabehart)
+-- put example of .git/config file
+
+- Jira issue tracking (https://itk.icts.uiowa.edu/jira/browse/SIMPLEITK)
+-- One-to-one correspondence between issues in Jira and topic branches in git
+-- If contributing, need to get set up with an account (talk to Hans?)
+
+- Workflow for new topic (*** DOESN'T USE GERRIT FOR NOW ***):
+-- Create issue on Jira or assign issue to yourself
+-- Create new topic branch of most current version of origin/master
+-- Topic naming convention "ISSUE_NUMBER-DescriptiveNameOfTopic" (eg: 75-ContributorTutorial)
+-- Work on local topic (try to keep commits granular to single pieces of work)
+-- Push branch to local fork (eg: git push gabehart 75-ContributorTutorial)
+-- Once you think it's finished, merge to next and push to origin/next
+--- Change status in Jira to "Resolved"
+-- QA process (HERE IS WHERE GERRIT WILL COME IN...)
+-- If necessary, re-open topic in Jira and make any additional changes necessary on local branch
+-- re-merge to next anc re-resolve issue in Jira
+-- Once fully QA'ed, merge to master and push to origin/master
+--- Change status in Jira to "Closed"
+
+\section ContributionTypes Ways to Contribute
+- Create new json file for ITK filter
+-- Outline steps for this (json structure, important fields, tests, etc...)
+
+- Create new manual filter
+-- Outline steps for this (copy filter from existing, important pieces of the code to change, etc...)
+
+- Add Example
+-- Create example, QA it, merge it
+
+- Bug fix
+-- follow basic workflow
+
 */
