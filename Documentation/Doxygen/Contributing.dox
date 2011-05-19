@@ -1,0 +1,34 @@
+/**
+\page Contributing SimpleITK Contributor Turorial
+
+\section Introduction Introduction
+- Discuss what SimpleITK is and why you should contribute!
+
+\section Structure SimpleITK Project Structure
+- Core components (Code/Common, Code/IO)
+-- Before editing, consult with core developers
+
+- BasicFilters (Code/BasicFilters)
+-- Auto Generated
+-- Manually written
+
+- Registration (Code/Registration)
+-- Not sure what to say here
+
+- Testing
+-- Auto Generated
+-- Wrapped tests (auto generated)
+-- Manually written
+
+- Wrapping
+-- Shouldn't be edited unless really necessary
+
+- Documentation
+-- Doxygen extra pages
+-- Auto generated doxygen(? talk to Dan)
+
+- Examples
+-- Please add new examples!
+-- Run them by the core developers before committing
+
+*/
